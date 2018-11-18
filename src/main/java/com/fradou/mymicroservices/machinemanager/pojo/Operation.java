@@ -6,24 +6,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
-@Table(name = "t_services_srv")
+@Table(name = "t_operations_ope")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Service {
+public class Operation {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "srv_id")
+    @Column(name = "ope_id")
     private Integer id;
 
-    @Column(name = "srv_name")
+    @Column(name = "ope_name")
     private String name;
 
-    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL)
-    private List<Operation> operations;
+    @ManyToOne
+    @JoinColumn(name = "srv_id")
+    @NotNull
+    private Service service;
 }
