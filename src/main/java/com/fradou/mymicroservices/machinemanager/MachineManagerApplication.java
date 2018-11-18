@@ -1,4 +1,4 @@
-package com.fradou.mymicroservicesparent.machinemanager;
+package com.fradou.mymicroservices.machinemanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

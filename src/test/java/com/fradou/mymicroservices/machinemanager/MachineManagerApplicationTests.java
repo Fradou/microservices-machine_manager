@@ -1,4 +1,4 @@
-package com.fradou.mymicroservicesparent.machinemanager;
+package com.fradou.mymicroservices.machinemanager;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
