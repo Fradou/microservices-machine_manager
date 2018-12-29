@@ -28,4 +28,8 @@ public class Operation {
     @JoinColumn(name = "srv_id")
     @NotNull
     private Service service;
+
+    @Column(name = "ope_command")
+    @NotNull
+    private String command;
 }
